@@ -1,38 +1,230 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --primary-color:  hsl(213, 96%, 18%);
+    --paragraph-color: hsl(231, 11%, 63%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    margin: auto;
+    width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-container{
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+p{font-size: 15px; color: var(--paragraph-color);}
+h1{font-size: 23px; color: var(--primary-color);}
+span{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.progress-nums{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    color: white;
+    font-weight: 600;
 }
+
+.nums{
+    padding: 10px 10px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+}.nums_active{
+    background-color: hsl(206, 94%, 87%);
+    padding: 10px 10px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.image-back > img{
+    z-index: 99999;
+    width: 100%;
+}
+
+
+/* .personal-info-form{
+    display: flex;
+    flex-direction: column;
+} */
+
+.instructions{
+    margin-top: 10px;
+}
+
+.personal-info-form{
+    margin-top: 20px;
+}
+
+.titleNdInput{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+label{
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.personal-info-input{
+    height: 35px;
+    border: 1px solid rgb(212, 212, 212);
+    outline: none;
+    padding: 5px;
+}
+.personal-info-input_active{
+    height: 35px;
+    border: 1px solid red;
+    outline: none;
+    padding: 5px;
+}
+
+
+/* ---------------Select Plans styles--------------- */
+
+
+.plans-container{
+    margin-top: 10px;
+}
+
+.plans{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    border: 1px solid hsl(217, 100%, 97%);
+    border-radius: 5px;
+}.plans_picked{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    border: 1px solid hsl(243, 100%, 62%);
+    border-radius: 5px;
+}
+.bonus-text{
+    color: var(--primary-color);
+}
+.changeDur-Btn-con{
+    margin-top: 10px;
+    display: grid;
+    place-items: center;
+}
+.changeDur-Btn{
+    padding: 10px 30px;
+    text-align: center;
+    background-color: hsl(354, 84%, 57%);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    
+}.changeDur-Btn:hover{
+    padding: 10px 30px;
+    text-align: center;
+    background-color: hsl(354, 63%, 43%);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    
+}
+
+.addons-main-container{
+    margin-top: 30px;
+}
+
+.addons-option-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.addons-option-sub1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}.addons-option-sub1 > p{font-size: 10px;}
+
+.addons-option-sub2 > p{
+    font-size: 13px;
+}
+
+
+.summary-list-container{
+    display: grid;
+    place-items: center;
+}
+.summary-list-container > li{
+    list-style: none;
+}
+
+
+.thankyou-container{
+    text-align: center;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.footer_active{display: none;}
+.footer > button{
+    background-color: hsl(213, 95%, 25%);
+    color: white;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}.footer > button:hover{
+    background-color: hsl(213, 95%, 15%);
+    color: white;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+
